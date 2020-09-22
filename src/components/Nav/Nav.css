@@ -1,0 +1,20 @@
+.nav-wrapper {
+  background: #def1f3;
+  padding: 30px 0;
+  margin-bottom: 60px;
+}
+
+.nav-wrapper a {
+  color: #2a7877;
+  font-family: "Archivo Black", sans-serif;
+  margin: 5px 15px;
+}
+
+.nav-wrapper a:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+.nav-wrapper a i {
+  margin: 0 6px;
+}

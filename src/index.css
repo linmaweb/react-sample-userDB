@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f6f6f6;
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+
+h1,
+h2 {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+}
+
+.header {
+  background: #2a7877;
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.header .container {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.header .title {
+  font-size: 4.2rem;
+  margin-bottom: 0.4rem;
+  color: white;
+}

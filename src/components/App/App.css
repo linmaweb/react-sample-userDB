@@ -1,0 +1,48 @@
+.container {
+  max-width: 960px;
+}
+
+.profile {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.Center {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.text-primary {
+  color: #333 !important;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.text-secondary {
+  color: #333 !important;
+  margin-bottom: 2px;
+}
+.text-info {
+  color: #333 !important;
+}
+.text-large {
+  font-size: 25px;
+}
+.card {
+  margin-top: 125px;
+}
+.cardImg {
+  margin-top: -80px;
+}
+.btn {
+  outline: none;
+}
