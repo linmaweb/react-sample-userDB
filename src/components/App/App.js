@@ -6,6 +6,7 @@ import "firebase/storage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { firebaseConfig, ContactContext, reducer } from "../../config";
+import Title from "../Title/Title";
 import Nav from "../Nav/Nav";
 import ContactAdd from "../ContactAdd/ContactAdd";
 import ContactList from "../ContactList/ContactList";
@@ -54,9 +55,10 @@ const App = () => {
 
   return (
     <>
+      <Title type="User Database" />
       {!firebaseSet ? (
         <h2 className="Center title-not-found">
-          (need to update Firebase config to display data)
+          (please add Firebase config to display data)
         </h2>
       ) : (
         <Router>
