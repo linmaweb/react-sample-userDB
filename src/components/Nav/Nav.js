@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link, useHistory, useRouteMatch } from "react-router-dom";
-import { ContactContext } from "../../config";
+import ContactContext from "../../context/ContactContext";
 import "./Nav.css";
 
 const Nav = () => {

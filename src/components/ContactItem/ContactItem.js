@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import firebase from "firebase/app";
-import { ContactContext } from "../../config";
+import ContactContext from "../../context/ContactContext";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import "./ContactItem.css";

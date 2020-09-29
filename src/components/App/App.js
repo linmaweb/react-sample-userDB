@@ -5,7 +5,8 @@ import "firebase/database";
 import "firebase/storage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { firebaseConfig, ContactContext, reducer } from "../../config";
+import { firebaseConfig, reducer } from "../../config";
+import ContactContext from "../../context/ContactContext";
 import Title from "../Title/Title";
 import Nav from "../Nav/Nav";
 import ContactAdd from "../ContactAdd/ContactAdd";
@@ -16,15 +17,43 @@ import "./App.css";
 
 firebase.initializeApp(firebaseConfig);
 
-const initialState = {
-  contacts: [],
-  contact: {},
-  contactToUpdate: null,
-  contactToUpdateKey: null,
-  isLoading: false,
-};
-
 const App = () => {
+  const initialState = {
+    contacts: [],
+    contact: {},
+    contactToUpdate: null,
+    contactToUpdateKey: null,
+    isLoading: false,
+  };
+
+  const reducer = (state, action) => {
+    switch (action.type) {
+      case "LIST_CONTACT":
+        return action.payload == null
+          ? { ...state, contacts: [] }
+          : { ...state, contacts: action.payload };
+
+      case "IS_LOADING":
+        return { ...state, isLoading: action.payload };
+
+      case "UPDATE_CONTACT":
+        return {
+          ...state,
+          contactToUpdate: action.payload,
+          contactToUpdateKey: action.key,
+        };
+
+      case "VIEW_CONTACT":
+        return {
+          ...state,
+          contact: action.payload,
+        };
+
+      default:
+        return state;
+    }
+  };
+
   const [state, dispatch] = useReducer(reducer, initialState);
   const firebaseSet = firebaseConfig.projectId;
   const getContacts = async () => {

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ContactContext } from "../../config";
+import ContactContext from "../../context/ContactContext";
 import "./ContactView.css";
 
 const ContactView = () => {

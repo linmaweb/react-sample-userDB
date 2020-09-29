@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import firebase from "firebase/app";
 import { v4 } from "uuid";
-import { ContactContext } from "../../config";
+import ContactContext from "../../context/ContactContext";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import { readAndCompressImage } from "browser-image-resizer";
